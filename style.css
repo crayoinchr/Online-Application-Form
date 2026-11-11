@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: #101b27;
+  color: #f4f7fa;
+  min-height: 100vh;
+}
+
+.topbar {
+  padding: 24px 8%;
+  border-bottom: 1px solid #304254;
+}
+
+.topbar h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.topbar span {
+  color: #50dfd0;
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  margin: 45px auto;
+  padding: 0 20px;
+}
+
+.form-card {
+  background: #1b2c40;
+  padding: 45px;
+  border: 1px solid #344b60;
+  border-radius: 18px;
+}
+
+.tag {
+  color: #50dfd0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: #50dfd0;
+}
+
+.subtitle {
+  color: #b4c2d0;
+  font-size: 17px;
+  margin-bottom: 38px;
+}
+
+h3 {
+  color: #50dfd0;
+  font-size: 19px;
+  margin: 30px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #40566a;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.field label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5edf4;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  background: #101b27;
+  color: #f4f7fa;
+  border: 1px solid #40566a;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #50dfd0;
+  box-shadow: 0 0 0 2px #50dfd020;
+}
+
+input[type="date"] {
+  color-scheme: dark;
+  min-height: 52px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(1);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+button {
+  width: 100%;
+  margin-top: 35px;
+  padding: 17px;
+  border: none;
+  border-radius: 8px;
+  background: #50dfd0;
+  color: #101b27;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c6ef62;
+  transform: translateY(-2px);
+}
+
+button span {
+  margin-left: 8px;
+  font-size: 22px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #8fa2b5;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* Submission result page */
+
+.result-card {
+  background: #1b2c40;
+  padding: 45px;
+  border: 1px solid #344b60;
+  border-radius: 18px;
+}
+
+.success {
+  color: #50dfd0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.result-card h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.result-card .subtitle {
+  margin-bottom: 30px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.result-item {
+  padding: 18px;
+  background: #101b27;
+  border: 1px solid #40566a;
+  border-radius: 9px;
+  overflow-wrap: anywhere;
+}
+
+.result-item small {
+  display: block;
+  color: #50dfd0;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.result-item p {
+  font-size: 17px;
+  color: #f4f7fa;
+}
+
+.result-item.full {
+  grid-column: 1 / -1;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 22px;
+  border-radius: 8px;
+  background: #50dfd0;
+  color: #101b27;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  background: #c6ef62;
+}
+
+@media (max-width: 650px) {
+  .form-card,
+  .result-card {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .form-grid,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full,
+  .result-item.full {
+    grid-column: auto;
+  }
+}
+input[type="date"] {
+  display: block;
+  width: 100%;
+  min-height: 55px;
+  padding: 14px;
+  background: #101b27;
+  color: #ffffff;
+  border: 1px solid #50dfd0;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+}
